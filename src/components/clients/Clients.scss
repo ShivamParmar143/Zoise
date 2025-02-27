@@ -1,0 +1,112 @@
+.clients{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    background-color: #fafbfc ;
+
+    
+}
+
+.te5{
+    font-size: 30px;
+    margin-top: -650px;
+    color: #1e304d;
+}
+
+.te6{
+    font-weight: 100;
+    color: #79798b;
+    font-size: 15px;
+}
+
+
+.comp1{
+    position: relative;
+    background-color: #3f6183;
+    
+    
+    .cimg1{
+        display: flex;
+        
+        top: 150px;
+        height: 350px;
+        position: absolute;
+        left: -490px;
+        width: 350px;
+        border: 1px solid rgb(187, 245, 179);
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+
+
+    .cdata{
+        top: 220px;
+        right: -500px;
+        width:700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid blue;
+        border-radius: 5px;
+        background-color: white;
+        color: #1e304d;
+        
+        position: absolute;
+        z-index: 9999;
+       
+    }
+
+    .rating{
+        position: absolute;
+        top: 406px;
+        left: 350px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        background-color: white;
+        color: yellow;
+        z-index: 9999;
+
+        #star{
+            fill: yellow;
+        }
+    }
+
+    .logos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        gap: 100px;
+        top: 600px;
+        right: -500px;
+        opacity: 0.5;
+        
+
+        
+        
+
+        .limg1{
+            height: 40px;
+
+            &:hover{
+                opacity: 1;
+                background-color: gray;
+            }
+        }
+
+        
+    }
+}
+
+
+
+
+
+

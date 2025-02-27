@@ -1,0 +1,52 @@
+.main-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-image: url("../../components/images/img-3.jpg");
+    background-size: 100%;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+    gap: 0px;
+    font-size: 24px;
+    width: 1520px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #002d3a;
+    opacity: 0.9;
+
+    #start1 {
+        margin-top: 20px;
+        color: white;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    #start-txt {
+        font-size: 15px;
+        color: #79798b;
+    }
+
+    #startbtn {
+        margin-top: 10px;
+        background-color: #12a894;
+        color: white;
+        padding: 10px 20px;
+        border: 1px solid #002d3a;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    #start-txt2{
+        margin-top: 30px;
+        font-size: 16px;
+        color: white;
+    }
+}
