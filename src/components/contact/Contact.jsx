@@ -1,7 +1,47 @@
 import React from 'react'
 import './Contact.scss'
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
 
 const Contact = () => {
+
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+        },
+        validationSchema: Yup.object({
+
+            name: Yup.string()
+                .required('Name is required')
+                .matches(/^([^0-9]*)$/, "Don't allow Numeric Value"),
+            email: Yup.string()
+                .required('Email is required')
+                .email('Enter a valid email'),
+            subject: Yup.string()
+                .required('Subject is required'),
+            message: Yup.string()
+                .required('Message is required'),
+        }),
+        onSubmit: async (values, { resetForm }) => {
+            try {
+                const { data } = await axios.post('https://zoise-backend.vercel.app/contact', values);
+                if (data.success) {
+                    alert(data.message)
+                } else {
+
+                    alert('try again');
+                }
+                resetForm();
+            } catch (error) {
+                alert(error.message);
+            }
+        },
+    })
+
   return (
     <div className='contact'>
         <div className='te10'>
@@ -30,15 +70,58 @@ const Contact = () => {
                 </div>
             </div>
             <div className='contact-right'>
-                <div className='form1'>
+                {/* <div className='form1'> */}
+                <form className='form1' onSubmit={formik.handleSubmit}>
                     <span className='ne'>
-                    <input type='text' id='name' placeholder='Your name'></input>
-                    <input type='email' id='email' placeholder='Your email'></input>
+                    <input
+                        type="text"
+                        placeholder='Your Name'
+                        id='name'
+                        value={formik.values.name}
+                        onChange={formik.handleChange}
+                    />
+                    {formik.touched.name && formik.errors.name && (
+                    <div>{formik.errors.name}</div>
+                    )}
+                    <input
+                        type="email"
+                        placeholder='Your Email'
+                        id='email'
+                        value={formik.values.email}
+                        onChange={formik.handleChange}
+                    />
+                    {formik.touched.email && formik.errors.email && (
+                    <div>{formik.errors.email}</div>
+                    )}
+                    {/* <input type='text' id='name' placeholder='Your name'></input>
+                    <input type='email' id='email' placeholder='Your email'></input> */}
                     </span>
-                    <input type='text' id='subject' placeholder='Your Subject..'></input>
-                    <textarea type='textarea' id='message' placeholder='Your message...' ></textarea>
-                    <button type='button' id='sendmsg'>Send Message</button>
-                </div>
+                    <input
+                        type="text"
+                        placeholder='Your Subject..'
+                        id='subject'
+                        value={formik.values.subject}
+                        onChange={formik.handleChange}
+                    />
+                    {formik.touched.subject && formik.errors.subject && (
+                    <div>{formik.errors.subject}</div>
+                    )}
+                    <textarea 
+                        type='textarea'
+                        placeholder='Your Message...'
+                        id='message'
+                        value={formik.values.message}
+                        onChange={formik.handleChange}
+                    />
+                    {formik.touched.message && formik.errors.message && (
+                    <div>{formik.errors.message}</div>
+                    )}
+
+                    {/* <input type='text' id='subject' placeholder='Your Subject..'></input>
+                    <textarea type='textarea' id='message' placeholder='Your message...' ></textarea> */}
+                    <button type='submit' id='sendmsg'>Send Message</button>
+                    </form>
+                {/* </div> */}
             </div>
     </div>
   )
