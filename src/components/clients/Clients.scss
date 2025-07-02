@@ -1,109 +1,298 @@
-.clients{
+// .clients{
     
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: 1000px;
+//     background-color: #fafbfc ;
+
+    
+// }
+
+// .te5{
+//     font-size: 30px;
+//     margin-top: -650px;
+//     color: #1e304d;
+// }
+
+// .te6{
+//     font-weight: 100;
+//     color: #79798b;
+//     font-size: 15px;
+// }
+
+
+// .comp1{
+//     position: relative;
+//     background-color: #3f6183;
+    
+    
+//     .cimg1{
+//         display: flex;
+        
+//         top: 150px;
+//         height: 350px;
+//         position: absolute;
+//         left: -490px;
+//         width: 350px;
+//         border: 1px solid rgb(187, 245, 179);
+//         border-radius: 10px;
+//         z-index: 1;
+//     }
+
+
+
+//     .cdata{
+//         top: 220px;
+//         right: -500px;
+//         width:700px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         flex-direction: column;
+//         border: 1px solid blue;
+//         border-radius: 5px;
+//         background-color: white;
+//         color: #1e304d;
+        
+//         position: absolute;
+//         z-index: 99;
+       
+//     }
+
+//     .rating{
+//         position: absolute;
+//         top: 406px;
+//         left: 350px;
+//         display: flex;
+//         flex-direction: row;
+//         gap: 10px;
+//         background-color: white;
+//         color: yellow;
+//         z-index: 9999;
+
+//         #star{
+//             fill: yellow;
+//         }
+//     }
+
+//     .logos{
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: center;
+//         align-items: center;
+//         position: absolute;
+//         gap: 100px;
+//         top: 600px;
+//         right: -500px;
+//         opacity: 0.5;
+        
+
+        
+        
+
+//         .limg1{
+//             height: 40px;
+
+//             &:hover{
+//                 opacity: 1;
+//                 background-color: gray;
+//             }
+//         }
+
+        
+//     }
+// }
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: #fafbfc;
+
+  .testimonial-row {
     display: flex;
-    flex-direction: column;
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .client-image-wrapper {
+    flex-shrink: 0;
+    z-index: 2;
+
+    .client-img {
+      width: 300px;
+      height: 360px;
+      object-fit: cover;
+      border: 4px solid #bbf5b3;
+      border-radius: 10px;
+    }
+  }
+
+.testimonial-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 60px;
+  gap: 0px; // removed gap so we control position manually
+}
+
+.client-image-wrapper {
+  z-index: 1;
+
+  .client-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.testimonial-box {
+  position: relative;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 500px;
+  margin-left: -50px; // slight overlap on the right side of image
+  margin-top: 70px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+
+  p {
+    font-size: 16px;
+    color: #1e304d;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #1e304d;
+  }
+
+  h4 {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #666;
+  }
+
+  .stars {
+    margin-top: 10px;
+    color: gold;
+    display: flex;
+    gap: 5px;
+  }
+}
+
+
+
+  .logos {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 1000px;
-    background-color: #fafbfc ;
+    gap: 80px;
+    margin-top: 80px;
+    opacity: 0.6;
 
-    
+    img {
+      height: 40px;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+  }
 }
 
-.te5{
-    font-size: 30px;
-    margin-top: -650px;
-    color: #1e304d;
+@media (max-width: 1200px) {
+  .caraousel1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cimg1 {
+    position: static;
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .cdata {
+    position: static;
+    width: 90%;
+    margin-top: 0;
+  }
+
+  .rating {
+    position: static;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .logos {
+    position: static;
+    margin-top: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
 }
 
-.te6{
-    font-weight: 100;
-    color: #79798b;
-    font-size: 15px;
+@media (max-width: 768px) {
+  .te5 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .te6 {
+    font-size: 13px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .cdata p {
+    font-size: 14px;
+  }
+
+  .cdata h3 {
+    font-size: 16px;
+  }
+
+  .cdata h4 {
+    font-size: 14px;
+  }
+
+  .logos .limg1 {
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cimg1 {
+    width: 220px;
+  }
+
+  .cdata {
+    padding: 20px;
+  }
+
+  .rating svg {
+    font-size: 18px;
+  }
 }
 
 
-.comp1{
-    position: relative;
-    background-color: #3f6183;
-    
-    
-    .cimg1{
-        display: flex;
-        
-        top: 150px;
-        height: 350px;
-        position: absolute;
-        left: -490px;
-        width: 350px;
-        border: 1px solid rgb(187, 245, 179);
-        border-radius: 10px;
-        z-index: 1;
-    }
 
-
-
-    .cdata{
-        top: 220px;
-        right: -500px;
-        width:700px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border: 1px solid blue;
-        border-radius: 5px;
-        background-color: white;
-        color: #1e304d;
-        
-        position: absolute;
-        z-index: 99;
-       
-    }
-
-    .rating{
-        position: absolute;
-        top: 406px;
-        left: 350px;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        background-color: white;
-        color: yellow;
-        z-index: 9999;
-
-        #star{
-            fill: yellow;
-        }
-    }
-
-    .logos{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        gap: 100px;
-        top: 600px;
-        right: -500px;
-        opacity: 0.5;
-        
-
-        
-        
-
-        .limg1{
-            height: 40px;
-
-            &:hover{
-                opacity: 1;
-                background-color: gray;
-            }
-        }
-
-        
-    }
-}
 
 
 

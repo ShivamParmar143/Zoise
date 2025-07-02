@@ -1,138 +1,306 @@
+// .contact {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: 800px;
+//     background-color: white;
+// }
+
+// .te10 {
+//     font-size: 30px;
+//     margin-top: 0px;
+//     color: #1e304d;
+// }
+
+// .te11 {
+//     font-weight: 100;
+//     color: #79798b;
+//     font-size: 14px;
+// }
+
+// .leftdata {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 50px;
+//     margin-left: -900px;
+//     margin-top: 100px;
+
+//     .sdata {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         flex-direction: column;
+
+//         #data-1 {
+//             margin-left: -70px;
+//             color: #1e304d;
+//             font-size: 20px;
+//             font-weight: 600;
+//         }
+
+//         #de-1 {
+//             font-size: 16px;
+//             color: #79798b;
+//         }
+
+//         #data-2 {
+//             margin-left: -50px;
+//             color: #1e304d;
+//             font-size: 20px;
+//             font-weight: 600;
+//         }
+
+//         #de-2 {
+//             margin-left: -60px;
+//             font-size: 16px;
+//             color: #79798b;
+//         }
+
+//         #data-3 {
+//             margin-left: -70px;
+//             color: #1e304d;
+//             font-size: 20px;
+//             font-weight: 600;
+//         }
+
+//         #de-3 {
+//             margin-left: -30px;
+//             font-size: 16px;
+//             color: #79798b;
+//         }
+//     }
+// }
+
+// .form1 {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 30px;
+//     margin-left: 400px;
+//     margin-top: -250px;
+
+//     .ne {
+//         display: flex;
+//         flex-direction: row;
+//         gap: 20px;
+//         justify-content: center;
+//         align-items: center;
+
+//         #name {
+
+//             width: 340px;
+//             border: 1px solid #79798b;
+//             border-radius: 5px;
+//             padding: 20px;
+//         }
+
+//         #email {
+
+//             width: 340px;
+//             border: 1px solid #79798b;
+//             border-radius: 5px;
+//             padding: 20px;
+//         }
+//     }
+
+//     #subject {
+
+//         width: 740px;
+//         border: 1px solid #79798b;
+//         border-radius: 5px;
+//         padding: 20px;
+//     }
+
+//     #message {
+//         height: 80px;
+//         width: 740px;
+//         border: 1px solid #79798b;
+//         border-radius: 5px;
+//         padding: 20px;
+//     }
+
+//     #sendmsg {
+//         background-color: #12a894;
+//         color: white;
+//         padding: 10px 20px;
+//         border: 1px solid white;
+//         border-radius: 5px;
+//         font-size: 14px;
+//         font-weight: 600;
+//         margin-left: -640px;
+//         cursor: pointer;
+//         height: 50px;
+//     }
+// }
+
 .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 800px;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: white;
+  margin-bottom: 60px; // ⬅️ Add space between Contact and Footer
+  
 }
 
+
 .te10 {
-    font-size: 30px;
-    margin-top: 0px;
-    color: #1e304d;
+  font-size: 2rem;
+  color: #1e304d;
+  margin-bottom: 10px;
+  text-align: center;
+  word-break: break-word;
+  padding: 0 10px;
 }
 
 .te11 {
-    font-weight: 100;
-    color: #79798b;
-    font-size: 14px;
+  color: #79798b;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 90%;
+  padding: 0 10px;
+  word-break: break-word;
 }
 
-.leftdata {
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  margin-left: 20px;
+
+  .leftdata {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-left: -900px;
-    margin-top: 100px;
+    gap: 40px;
 
     .sdata {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
-        #data-1 {
-            margin-left: -70px;
-            color: #1e304d;
-            font-size: 20px;
-            font-weight: 600;
-        }
+      #data-1,
+      #data-2,
+      #data-3 {
+        color: #1e304d;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
 
-        #de-1 {
-            font-size: 16px;
-            color: #79798b;
-        }
-
-        #data-2 {
-            margin-left: -50px;
-            color: #1e304d;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        #de-2 {
-            margin-left: -60px;
-            font-size: 16px;
-            color: #79798b;
-        }
-
-        #data-3 {
-            margin-left: -70px;
-            color: #1e304d;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        #de-3 {
-            margin-left: -30px;
-            font-size: 16px;
-            color: #79798b;
-        }
+      #de-1,
+      #de-2,
+      #de-3 {
+        color: #79798b;
+        font-size: 16px;
+      }
     }
+  }
 }
 
-.form1 {
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+
+  .form1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-left: 400px;
-    margin-top: -250px;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 
     .ne {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      gap: 20px;
+      width: 100%;
 
-        #name {
-
-            width: 340px;
-            border: 1px solid #79798b;
-            border-radius: 5px;
-            padding: 20px;
-        }
-
-        #email {
-
-            width: 340px;
-            border: 1px solid #79798b;
-            border-radius: 5px;
-            padding: 20px;
-        }
-    }
-
-    #subject {
-
-        width: 740px;
+      #name,
+      #email {
+        width: calc(50% - 10px);
+        padding: 15px;
         border: 1px solid #79798b;
         border-radius: 5px;
-        padding: 20px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+    }
+
+    #subject,
+    #message {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #79798b;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
     }
 
     #message {
-        height: 80px;
-        width: 740px;
-        border: 1px solid #79798b;
-        border-radius: 5px;
-        padding: 20px;
+      height: 100px;
+      resize: none;
     }
 
     #sendmsg {
-        background-color: #12a894;
-        color: white;
-        padding: 10px 20px;
-        border: 1px solid white;
-        border-radius: 5px;
-        font-size: 14px;
-        font-weight: 600;
-        margin-left: -640px;
-        cursor: pointer;
-        height: 50px;
+      background-color: #12a894;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      align-self: flex-start;
     }
+  }
 }
+
+// ========== 📱 Mobile View ==========
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .te10 {
+    font-size: 1.5rem;
+  }
+
+  .te11 {
+    font-size: 0.95rem;
+  }
+
+  .form1 .ne {
+    flex-direction: column;
+
+    #name,
+    #email {
+      width: 100%;
+    }
+  }
+
+  .form1 {
+    padding: 0 10px;
+  }
+
+  #sendmsg {
+    align-self: center;
+  }
+}
+
