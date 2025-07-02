@@ -16,7 +16,7 @@ const Account = ({onClose}) => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch('http://localhost:3035/account-details', {
+                const response = await fetch('http://zoise-backend.vercel.app/account-details', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

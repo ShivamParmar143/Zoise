@@ -156,7 +156,7 @@ const Contact = () => {
         }),
         onSubmit: async (values, { resetForm }) => {
             try {
-                const { data } = await axios.post('http://localhost:3035/contact', values);
+                const { data } = await axios.post('http://zoise-backend.vercel.app/contact', values);
                 if (data.success) {
                     alert(data.message);
                 } else {

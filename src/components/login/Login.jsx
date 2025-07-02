@@ -26,7 +26,7 @@ const Login = ({onClose}) => {
         }),
         onSubmit: async (values, { resetForm }) => {
             try {
-                const { data } = await axios.post('http://localhost:3035/login', values);
+                const { data } = await axios.post('http://zoise-backend.vercel.app/login', values);
                 setToken(data.data)
                 if (data.success) {
                     alert(data.message)
