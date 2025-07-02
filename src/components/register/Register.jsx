@@ -40,7 +40,7 @@ const Register = ({onClose}) => {
         async (values, { resetForm }) => {
             
             try {
-                const {data} = await axios.post('https://zoise-backend.vercel.app/register', values);
+                const {data} = await axios.post('https://zoise-backend.vercel.app/api/register', values);
                 if(data.success){
                     setMsg(data.message);
                     setmsgAvailable(true);
