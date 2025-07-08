@@ -7,6 +7,32 @@ import Account from '../account/Account';
 
 const Header = () => {
 
+  const [showHeader, setShowHeader] = useState(true);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.innerWidth <= 768) {
+      const scrollY = window.scrollY;
+
+      if (scrollY < 100) {
+        // near top (Home)
+        setShowHeader(true);
+      } else {
+        // not on Home section
+        setShowHeader(false);
+      }
+    } else {
+      // Always show header on desktop
+      setShowHeader(true);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
+
   const [bgColor, setBgColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
   const [isOpen, setIsOpen] = useState(false);
@@ -58,11 +84,22 @@ const Header = () => {
 
   return (
     <>
-      <div className='header' style={{
+      {/* <div className='header' style={{
         backgroundColor: bgColor,
         color: textColor,
         transition: "background-color 2s ease, color 2s ease",
-      }}>
+      }}> */}
+      <div
+  className="header"
+  style={{
+    backgroundColor: bgColor,
+    color: textColor,
+    transform: showHeader ? "translateY(0)" : "translateY(-100%)",
+    transition: "transform 0.3s ease, background-color 0.5s ease, color 0.5s ease",
+  }}
+>
+
+
         <div className='left'>
           <h2>ZOISE</h2>
         </div>

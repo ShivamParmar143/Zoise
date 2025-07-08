@@ -249,6 +249,27 @@
 }
 
 @media (max-width: 768px) {
+  .caraousel1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cimg1 {
+    width: 90%;
+    max-width: 240px;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 10px;
+  }
+
+  .cdata {
+    width: 100%;
+    padding: 0 10px;
+  }
+
   .te5 {
     font-size: 22px;
     text-align: center;
@@ -261,15 +282,29 @@
   }
 
   .cdata p {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
   }
 
-  .cdata h3 {
-    font-size: 16px;
-  }
-
+  .cdata h3,
   .cdata h4 {
     font-size: 14px;
+    margin-top: 6px;
+    color: #333;
+  }
+
+  .rating {
+    position: static;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .logos {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
   }
 
   .logos .limg1 {
@@ -277,19 +312,30 @@
   }
 }
 
+
 @media (max-width: 480px) {
   .cimg1 {
-    width: 220px;
+    width: 100%;
+    max-width: 200px;
   }
 
   .cdata {
-    padding: 20px;
+    padding: 10px;
+  }
+
+  .cdata p {
+    font-size: 13px;
   }
 
   .rating svg {
     font-size: 18px;
   }
+
+  .logos .limg1 {
+    height: 24px;
+  }
 }
+
 
 
 
